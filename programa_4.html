@@ -1,0 +1,58 @@
+<canvas width="600"  height="400"></canvas>
+
+<script>
+   /*
+   var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function exibeAlerta(evento) {
+
+        alert('Cliquei');
+        console.log(evento);
+
+    }
+
+    tela.onclick = exibeAlerta;
+    */
+
+</script>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    /*
+    function exibeAlerta(evento) {
+        var x = evento.pageX;
+        var y = evento.pageY;
+        //pageX e pageY nos dizem a posição do clique em relação à página.
+        //Se quisermos as coordenadas relativas ao canvas, basta subtrairmos a posição em que o canvas (nossa tela) foi desenhado na página: offsetLeft e offsetTop
+        alert("posição do clique : " + x + ", " + y);
+    }
+    */
+
+    function desenhaCirculo(evento) {
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+        pincel.fillStyle="blue";
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*3.14);
+        pincel.fill();
+
+        console.log("posição do clique : " + x + ", " + y);
+}
+    tela.onclick = desenhaCirculo;
+    // associar a função desenhaCirculo ao evento onclick da nossa tela
+    //Aprendemos também que será o navegador que chamará a nossa função, pois ele sabe identificar cliques no canvas.
+    //Além de chamar a função, ele passará sempre um parâmetro para ela.
+    //Graças a esse parâmetro, temos acesso a várias informações sobre o evento disparado e, no caso, podemos descobrir a posição do eixo x e y da tela que o usuário clicou.
+    
+</script>
