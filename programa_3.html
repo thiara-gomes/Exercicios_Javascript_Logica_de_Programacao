@@ -1,0 +1,122 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d')
+
+/*
+pincel.fillStyle = 'green';
+pincel.fillRect(0, 0, 50, 50);
+pincel.strokeStyle = 'black';
+pincel.strokeRect(0, 0, 50, 50);
+
+pincel.fillRect(50, 0, 50, 50);
+pincel.strokeRect(50, 0, 50, 50);
+
+pincel.fillRect(100, 0, 50, 50);
+pincel.strokeRect(100, 0, 50, 50);
+*/
+
+/*
+function desenhaQuadradoVerde() {
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 50, 50);
+    pincel.strokeStyle = 'red'
+    pincel.strokeRect(0, 0, 50, 50);
+
+}
+
+desenhaQuadradoVerde();
+*/
+
+/*
+function desenhaQuadrado(x, y) {
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle = 'black';
+    pincel.strokeRect(x, y, 50, 50);
+
+}
+
+//desenhaQuadrado(0, 0);
+//desenhaQuadrado(50, 0);
+//desenhaQuadrado(100, 0);
+
+desenhaQuadrado(0, 0);
+desenhaQuadrado(0, 50);
+desenhaQuadrado(0, 100);
+*/
+
+/*
+function desenhaQuadrado(x, y, cor) {
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle = 'black';
+    pincel.strokeRect(x, y, 50, 50);
+
+}
+
+desenhaQuadrado(0, 0, 'blue');
+desenhaQuadrado(0, 50, 'red');
+desenhaQuadrado(0, 100, 'yellow');
+*/
+
+/*
+function desenhaQuadrado(x, y, cor) {
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle = 'black';
+    pincel.strokeRect(x, y, 50, 50);
+
+}
+
+desenhaQuadrado(0, 0, 'green');
+desenhaQuadrado(50, 0, 'green');
+desenhaQuadrado(100, 0, 'green');
+*/
+
+function desenhaQuadrado(x, y, cor) {
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle = 'black';
+    pincel.strokeRect(x, y, 50, 50);
+
+}
+/*
+var x = 0;
+while(x < 600) {
+
+desenhaQuadrado(x, 0, 'green');
+desenhaQuadrado(x, 50, 'red');
+desenhaQuadrado(x, 100, 'blue');
+x = x + 50;
+}
+*/
+
+for(var x = 0; x < 600; x = x + 50) {
+    desenhaQuadrado(x, 0, 'green')
+    desenhaQuadrado(x, 50, 'red')
+
+}
+</script>
