@@ -1,0 +1,73 @@
+<!--Duas maneiras de escrever o mesmo conteúdo: (1) escrevendo HTML dentro do JavaScript; (2) escrevendo o texto diretamente no HTML-->
+
+<!--
+<meta charset="UTF-8">
+<script>
+    document.write("Estou escrevendo do mundo JavaScript no mundo HTML");
+</script>
+-->
+
+<!--
+<meta charset="UTF-8">
+Estou escrevendo do mundo JavaScript no mundo HTML
+<script>
+
+</script>
+-->
+
+<!--<meta charset="UTF-8">
+Estou escrevendo do mundo JavaScript no mundo HTML
+<script>
+
+</script>
+Aqui também é mundo HTML, porque esta fora da TAG script
+-->
+
+<!-- (1) Escrevendo do mundo JavaScript no mundo HTML; o resultado é o mesmo que se tivéssemos escrito diretamente no mundo HTML(2)-->
+
+<!--
+<meta charset="UTF-8">
+<script>
+    document.write("<h1>Seja bem-vindo</h1>");
+</script>
+--> 
+
+<!--ou-->
+
+<!--
+<meta charset="UTF-8">
+<h1>Seja bem-vindo</h1>
+<script>
+</script>
+-->
+
+<!--
+<meta charset="UTF-8">
+<script>
+    document.write((200 + 100 + 300 + 400)/4);
+</script>
+-->
+
+<meta charset="UTF-8">
+<script>
+    /*document.write("A média do valor gasto com as viagens é<br>");
+    document.write( (200 + 100 + 300 + 400) / 4);*/
+
+    //ou o <br> em outra instrução:
+
+   /* document.write("A média do valor gasto com as viagens é");
+    document.write("<br>");
+    document.write( (200 + 100 + 300 + 400) / 4);*/
+
+    //ou dar um espaço dentro do texto entre aspas, depois de "é ":
+
+    /*document.write("A média do valor gasto com as viagens é ");
+    document.write( (200 + 100 + 300 + 400) / 4);*/
+
+    //document.write("18 + 2"); //uma string normal -> resulta no texto "18 + 2"
+    //document.write("18" + "2"); //concanetação
+    //document.write(18 + 2); //operação matemática
+    //document.write("Média calculada " + 20);
+    document.write(12 + " anos");
+
+</script>
