@@ -1,0 +1,506 @@
+<meta charset="UFT-8">
+
+<!--
+<script>
+
+	//document.write("Eu acertei: " + ((15/50)*100) + "%"); //obs: operação matemática não coloca entre aspas
+	//document.write("Eu acertei: " + 15/50*100 + "%");
+	document.write("A" + "B" + 20 + 10 + "C" + (5 + 10) + "D");
+
+</script>
+-->
+
+<!--DIFERENÇA DE IDADE-->
+
+<!--
+<script>
+	
+		function pulaLinha() {
+			document.write("<br>");
+		}
+
+		function mostra (frase) {
+			document.write(frase);
+		}
+
+	var minhaIdade = 28;
+	var amigoIdade = 33;
+	
+	mostra("Nossa diferença de idade é de " + (minhaIdade - amigoIdade) + " anos");
+	pulaLinha()
+
+</script>
+-->
+
+<!--
+<script>
+
+		function pulaLinha() {
+			document.write("<br>");
+		}
+
+		function mostra (frase) {
+			document.write(frase);
+			pulaLinha();
+		}
+
+	var mediaIdade = 28;
+	var anoAtual = 2021;
+	var quantidadeGeracoes = (anoAtual - 1500)/mediaIdade;
+	
+	mostra("Desde 1500 até o ano atual se passaram " + Math.round(quantidadeGeracoes) + " gerações.");
+
+</script>
+-->
+
+<!--
+<meta charset="UTF-8">
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var idadeMediaQuandoTemFilhos = 28;
+        var anoAtual = 2021; 
+        var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+
+        mostra(quantidadeDeGeracoes);
+
+    </script>
+    -->
+
+    <!--
+    <script>
+    	function geraCodigo(letra, numero1, numero2) {
+
+    		return "GH1022";
+		}
+
+		var codigo = geraCodigo("A", 20, 30);
+		document.write(codigo); // mostrou GH1022
+
+		function funcaoQualquer() {
+		    var n1 = 10;
+		    var n2 = 20;
+		    var n3 = 30;
+    		return n2; // Veja que dentro de uma função podemos declarar variáveis, contudo, se quiser retornar o valor de uma delas precisamos usar a instrução return seguida do nome da variável.
+    	}
+
+    </script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numero1 = prompt("Digite o primeiro número");
+    var numero2 = prompt("Digite o segundo número");
+
+    mostra("O valor de " + numero1 + " vezes " + numero2 + " é: " + (numero1 * numero2));
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function b(numero1, numero2) {
+        return numero1 / numero2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    mostra(resultado);
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(texto) {
+
+        return "(" + texto + ")";
+    }
+
+    function b(texto) {
+
+        return "@" + texto + "@";
+    }
+
+    function c(nome, sobrenome) {
+
+        return b(nome + " " + a(sobrenome));
+
+    }
+
+    var resultado = c("Flávio", "Almeida");
+
+    mostra(resultado);
+
+    // Explicação: função b esta recebendo a concatenação do nome com o sobrenome, mas veja que o sobrenome é o retorno da função a. A função a devolverá o sobrenome entre parênteses, daí, esse valor será concatenado com o nome e o resultado finalmente será passado para a função B.
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var quantidadeCarbono1 = parseInt(prompt("Quantidade de carbono substância 1"));
+    var quantidadeCarbono2 = parseInt(prompt("Quantidade de carbono substância 2"));
+
+    quantidadeCarbono2 = quantidadeCarbono2 + 2;
+
+    if(quantidadeCarbono1 == quantidadeCarbono2) {
+
+        mostra("Acho que são substâncias parecidas");
+    } else {
+
+        mostra("São substâncias bem diferentes");
+    }
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+
+    if(idade >= 18 && temCarteira == "S") {
+        mostra("Pode dirigir!");
+    } else {
+        mostra("Não pode dirigir!");
+    }
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia() {
+
+        return Math.round(Math.random() * 100);
+    }   
+
+    var numeroPensado = sorteia();
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+        var contador = 1;
+
+        while(contador <= 10) {
+
+            mostra("Já era, você errou!");
+            contador = contador + 1;
+        }
+
+    }
+</script>
+-->
+
+<!--
+<script>
+
+//Imprima todos os números pares de 1 a 100. 
+//O contador começa valendo 2 e a cada repetição ele é incrementado com mais dois. Sendo assim, teremos 2, 4, 6, 8... até chegar a 100! Quando o contador atingir 102 o while se recusará a repetir, assim, a próxima instrução será executada.
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+var contador = 2;
+
+while(contador <= 100) {
+
+    mostra(contador);
+    contador = contador + 2;
+}
+
+mostra("FIM");
+
+</script>
+-->
+
+<!--
+<script>
+//Imprima todos os números entre 30 e 40 (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos!
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+var contador = 30;
+
+while(contador <= 40) {
+
+    if(contador == 33) {
+    contador = contador + 1;
+    }
+
+    if(contador == 37) {
+    contador = contador + 1;
+    }
+
+    else {
+        mostra(contador);
+        contador = contador + 1
+    }
+}
+
+mostra("FIM");
+
+</script>
+-->
+
+<!--
+<script>
+
+//Imprima em ordem decrescente todos os números entre 20 e 0, incluindo os limites!
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var contador = 20;
+
+    while(contador >= 0) {
+
+        mostra(contador);
+        contador = contador - 1;
+    }
+
+    mostra("FIM");
+
+</script>
+-->
+
+<!--
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        alert("Bem-vindo ao sistema " + loginInformado);
+    } else {
+
+        alert("Login inválido. Tente novamente");
+    }
+</script>
+-->
+
+<!--
+<script>
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maximoTentativas) {
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema, " + loginInformado);
+
+            tentativaAtual = maximoTentativas; // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1! 
+        }
+        else {
+
+            if (tentativaAtual == 3) {
+                alert("Número permitido de tentativas ultrapassado!");
+            } 
+            else {
+                alert("Login inválido. Tente novamente");
+            }
+        }
+
+        // vai para a próxima tentativa
+        tentativaAtual = tentativaAtual +1  
+    }
+
+</script>
+-->
+
+<!--
+<script>
+
+//for( var i = 0; i < 10; i++ ) {
+    //alert( "O resultado é " + (2 * i) );
+//}
+
+var i = 0;
+while(i < 10) {
+    alert("O resultado é " + (2 * i));
+    i++
+}
+</script>
+-->
+
+<!--
+<script>
+var contador = 1;
+
+while(contador <= 3) {
+
+    alert("Deixe-me entrar!");
+    contador++; //contador = contador + 1
+}
+</script>
+-->
+
+<!--
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var resposta = ""; // ainda não tem a resposta
+
+    while(true) {
+
+        resposta = prompt("Qual é seu nome?");
+
+        if( resposta == "SAIR" || resposta == "sair") {
+
+            break;
+        }
+    }
+
+    mostra("FIM");
+
+</script>
+-->
+
+<!--
+<script>
+var parcelas = [10.40, 40.00, 100.18, 200];
+
+    for(var i = 0; i < parcelas.length; i = i + 1) {
+        document.write(parcelas[i]);
+    }
+
+document.write("FIM");
+</script>
+-->
+
+<script>
+/*
+var letras = ['A', 'B', 'C', 'D'];
+
+    for( var i = 0; i < letras.length; i++ ) {
+        alert(letras[i]);
+    }
+    */
+</script>*/
+
+<script>
+
+    var aprendi = true;
+
+    if(aprendi) {
+
+        alert('O instrutor fica muito contente');
+    } else {
+
+        alert('O instrutor não vai desistir até você virar um cangaceiro!');
+    }
+</script>
