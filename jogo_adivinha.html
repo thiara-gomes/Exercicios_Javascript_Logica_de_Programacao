@@ -1,0 +1,114 @@
+<meta charset="UTF-8">
+
+<!--
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+//var numeroPensado = 5;
+//var chute = parseInt(prompt("digite seu chute!"))
+
+var numeroPensado = Math.round(Math.random() * 10);
+console.log(numeroPensado); 
+// teste para descobrirmos se o usuário errou ou acertou, utilizando o console.log(). O numeroPensado será exibido no console do navegador, em que poderemos visualizar antes mesmo de inserirmos nosso palpite. Truque do malandro! Importante colocar esse comando, aqui no programa, logo após o var do número pensando; se colocar depois do var do chute, só descobriremos o número após o chute. 
+var chute = parseInt(prompt("digite seu chute!"));
+
+//var numeroPensado = Math.round(Math.random() * 100);
+//var chute = parseInt(prompt("digite seu chute!"));
+
+//if(chute == numeroPensado) {
+    //mostra("Você acertou!");
+
+//if(chute !=  numeroPensado) {
+    //mostra("Você errou, o número pensado foi " + numeroPensado);
+
+if(chute == numeroPensado) {
+    mostra("Você acertou!");
+
+} else {
+    mostra("Você errou, o número pensado foi " + numeroPensado);
+}
+
+</script>
+-->
+
+<!--
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+
+    	return Math.round(Math.random() * n);
+    }
+
+    //var numeroPensado = Math.round(Math.random() * 100); //esta opção é quando não se tem uma função (no caso, a função sorteia)
+
+    var numeroPensado = sorteia(10) //var numeroPensado = sorteia(n) -> escolhe até qual nº deseja-se fazer o sorteio...10,100, 500 etc
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+        mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+    }
+</script>
+-->
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10); 
+
+    var tentativas = 1;
+
+    while(tentativas <= 3) {
+
+        var chute = parseInt(prompt("Digite seu chute"));
+
+        if(chute == numeroPensado) {
+
+            mostra("Uau! Você ACERTOU, o número pensado era " + numeroPensado);
+            break; 
+            //alternativamente, poderíamos inserir no loop a informação tentativas = 4, visto que as tentativas são <=3. Desta forma, inevitavelmente o loop seria quebrado e obteríamos o mesmo resultado. Ou seja, podemos tanto utilizar o break() quanto alterar a variável da condição, conferindo a ela um valor para o qual ela cessará de repetir.
+
+        } else {
+
+            mostra("Você ERROU!");
+        }
+        tentativas++
+        //Para que o número de tentativas seja acumulado, precisaremos incrementar a variável tentativas.
+    }
+
+    mostra("Fim!")
+</script>
