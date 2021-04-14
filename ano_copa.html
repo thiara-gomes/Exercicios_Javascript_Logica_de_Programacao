@@ -1,0 +1,84 @@
+<meta charset="UFT-8">
+
+<!--
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+var anoCopa = 1930;
+
+while(anoCopa <= 2020) {
+
+    //alert("Teve copa em " + anoCopa);
+    //Exibir o alert pode não ser agradável para o usuário. Assim, utilizaremos a função mostra:
+    
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+
+}
+
+//alert("FIM");
+mostra("FIM");
+
+</script>
+-->
+
+<!--
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+var anoCopa = 1930;
+var limite = parseInt(prompt("Entre com a data limite"));
+
+while(anoCopa <= limite) {
+
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+
+mostra("FIM");
+
+</script>
+-->
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+    while(anoCopa <= limite) {
+
+        mostra(anoCopa + " tem copa!");
+        anoCopa = anoCopa + 4;
+    }
+
+mostra("Ufa! Esses foram os anos de copa até " + limite);
+
+</script>
