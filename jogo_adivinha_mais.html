@@ -1,0 +1,234 @@
+<meta charset="UTF-8">
+
+<!--
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    var segredo = 5;
+
+    var inputNoJava = document.querySelector("input");
+
+    function verifica() {
+
+        if(inputNoJava.value == segredo) {
+
+        alert("Você ACERTOU!");
+        } else {
+
+        alert("Você ERROU!!!!!!!!");
+        }
+
+    }
+
+    var buttonNoJava = document.querySelector("button");
+
+    buttonNoJava.onclick = verifica;
+
+</script>
+-->
+
+<!--
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    var segredo = Math.round(Math.random() * 10);
+
+    var inputNoJava = document.querySelector("input");
+    inputNoJava.focus();
+
+    function verifica() {
+
+        if(inputNoJava.value == segredo) {
+
+        alert("Você ACERTOU!");
+        } else {
+
+        alert("Você ERROU!!!!!!!!");
+        }
+
+        inputNoJava.value = "";
+        inputNoJava.focus();
+
+    }
+
+    var buttonNoJava = document.querySelector("button");
+
+    buttonNoJava.onclick = verifica;
+
+</script>
+-->
+
+<!--
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+
+    var segredos = [5,7,10,2,3];
+
+    var input = document.querySelector("input");
+        input.focus();
+
+    function verifica() {
+
+    var achou = false;
+
+    //for(var posicao = 0; posicao < 5; posicao++) {
+    for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+        if(input.value == segredos[posicao]) {
+
+            alert("Você ACERTOU!");
+            //Quando o número digitado corresponder a um dos elementos do array, declararemos achou = true. Com isso, informamos ao JavaScript que um dos números é compatível.
+            achou = true; 
+            break;
+        }
+    }
+
+    //Caso o número digitado não esteja presente em segredos, informaremos que if(achou == false), ou seja, se achou for false, deve ser exibido um aviso informando ao usuário que ele errou.
+    if(achou == false) {
+        alert("Você ERROU!");
+    }
+
+    input.value = "";
+    input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
+-->
+
+<!--
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    function sorteia() {
+
+       return Math.round(Math.random() * 10);
+
+    }
+
+    var segredos = [];
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+
+    //console.log(segredos);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+       var achou = false;
+
+       for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+              if(input.value == segredos[posicao]) {
+
+                     alert("Você ACERTOU!");
+                     achou = true;
+                     break;
+              } 
+       }
+
+       if(achou == false) {
+
+              alert("Você ERROU!");
+       }
+
+       input.value = "";
+       input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
+-->
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    function sorteia() {
+
+       return Math.round(Math.random() * 10);
+
+    }
+
+    //essa função sorteiaNumeros deve ser capaz de nos dar uma lista com números aleatórios que não se repetem e  receberá como parâmetro quantidade.
+    function sorteiaNumeros(quantidade) {
+
+        // criaremos uma nova variável, segredos, que começa com o array vazio
+        var segredos = [];
+
+        //criaremos o contador numero, que iniciará em 1 e, enquanto numero for menor ou igual a quantidade, o segredos.push() receberá a função sorteia()
+        var numero = 1;
+
+        while(numero <= quantidade) {
+
+              segredos.push(sorteia());
+              numero++;
+
+        }
+        //ao final de tudo, teremos um return de segredos
+        return segredos;
+
+    }
+    //O número que passarmos como parâmetro em sorteiaNumeros() é o total de itens aleatórios que não se repetem, e que serão retornados.
+    //No caso, passaremos 3, sendo assim, quantidade valerá 3.
+    var segredos = sorteiaNumeros(3);
+                                    
+    console.log(segredos);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+       var achou = false;
+
+       for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+              if(input.value == segredos[posicao]) {
+
+                     alert("Você ACERTOU!");
+                     achou = true;
+                     break;
+              } 
+       }
+
+       if(achou == false) {
+
+              alert("Você ERROU!");
+       }
+
+       input.value = "";
+       input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
+
+//Nosso código será carregado e executará a função sorteia();
+//Esta, por sua vez, é uma atalho para que possamos retornar um número aleatório entre 1 e 10;
+//A segunda função, sorteiaNumeros(), recebe a quantidade de números que queremos sortear para nos devolver uma lista de segredos que, ao ser chamada, declara uma lista vazia;
+//A variável numero foi criada para sabermos que a quantidade máxima de números que precisamos gerar foi atingida;
+//O último número será incrementado, mas não poderá dar continuidade ao while(), com isso partimos para a execução da última instrução, que é return segredos;
+//Assim, o segredos que está na var segredos recebe o valor do segredos que está em return.
