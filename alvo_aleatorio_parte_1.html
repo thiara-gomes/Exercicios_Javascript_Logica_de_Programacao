@@ -1,0 +1,72 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    /*temos que saber que nosso raio padrão terá o valor inicial de 10, 
+    os demais serão maiores, para criar a imagem de um alvo.*/
+    var raio = 10;
+
+    /*Função desenhaCirculo recebe mais um parâmetro(cor) e será utilizado no fillStyle.
+    Temos isso porque haverá círculos na cor branca e vermelha*/
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+
+   }
+
+    function limpaTela() {
+        
+        pincel.clearRect(0, 0, 600, 400);
+
+    }
+
+    /*Com o alvo criado, precisamos fazer com que seu aparecimento seja aleatório, ou seja, que sejam criadas coordenadas arbitrárias. 
+    Para isso, vamos inserir as instruções para a criação do alvo dentro de uma nova função chamada desenhaAlvo() que receberá 
+    parâmetros referentes às coordenadas X (até o limite de 600) e Y (até o limite de 400)*/
+    function desenhaAlvo(x, y) {
+
+        desenhaCirculo(x, y, raio+20, 'red');
+        desenhaCirculo(x, y, raio+10, 'white');
+        desenhaCirculo(x, y, raio, 'red');
+
+    }
+
+    /*os valores das coordenadas sejam gerados aleatoriamente.
+    Criamos a função sorteiaPosicao(),que receberá um valor maximo 
+    que pode sortear entre 0 a 600 (para o eixo X), e 0 a 400 (para o eixo Y)*/
+    function sorteiaPosicao(maximo) {
+
+        /*a função soreiaPosicao nos dará um retorno - return - de Math.floor, 
+        que arredonda o número para baixo, diferente do Math.round, que o arredonda para cima*/
+        return Math.floor(Math.random() * maximo);
+
+    }
+
+    /*objetivo será fazer com que o alvo seja redesenhado em certos intervalos de tempo, pré-determinados.
+    Para isso, criamos função atualizaTela(), que receberá as variáveis referentes ao X e Y aleatórios, bem como o chamamento de desenhaAlvo*/
+    function atualizaTela() {
+        
+        limpaTela();
+
+        /*Criaremos uma variável xAleatorio que recebe sorteiaPosicao, já que estamos trabalhando com a variável X, então o valor máximo será 600. 
+        Do mesmo modo, criaremos uma variável yAleatorio que receberá sorteiaPosicao, cujo máximo será 400*/
+        var xAleatorio = sorteiaPosicao(600);
+        var yAleatorio = sorteiaPosicao(400);
+
+        //passar estes valores para a função desenhaAlvo()
+        desenhaAlvo(xAleatorio, yAleatorio);
+    }
+
+    /*utilizaremos o setInterval(), com os parâmetros atualizaTela e o intervalo de tempo 1000, 
+    sem esquecer de incluir na função o limpaTela dentro da função atualizaTela*/
+    setInterval(atualizaTela, 1000);
+
+</script>
